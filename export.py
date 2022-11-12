@@ -123,8 +123,10 @@ if __name__ == '__main__':
         output_names = ['classes', 'boxes'] if y is None else ['output']
         dynamic_axes = None
         if opt.dynamic:
-            dynamic_axes = {'images': {0: 'batch', 2: 'height', 3: 'width'},  # size(1,3,640,640)
-             'output': {0: 'batch', 2: 'y', 3: 'x'}}
+            # dynamic_axes = {'images': {0: 'batch', 2: 'height', 3: 'width'},  # size(1,3,640,640)
+            #  'output': {0: 'batch', 2: 'y', 3: 'x'}}
+            dynamic_axes={'images': {0: 'batch'},  # size(1,3,640,640)
+              'output': {0: 'batch'}}
         if opt.dynamic_batch:
             opt.batch_size = 'batch'
             dynamic_axes = {
