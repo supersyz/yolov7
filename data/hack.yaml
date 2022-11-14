@@ -12,4 +12,4 @@ test: ./dataset/test_list.txt  # 9  images
 nc: 3
 
 # class names
-names: [ 'bottle', 'CARDBOARD', 'banane' ]
+names: ['banane','bottle', 'CARDBOARD', ]
