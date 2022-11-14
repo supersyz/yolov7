@@ -1,6 +1,7 @@
 dataset/
 dataset
-
+.plan
+tensorrt-python
 # Repo-specific GitIgnore ----------------------------------------------------------------------------------------------
 *.jpg
 *.jpeg
